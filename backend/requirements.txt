@@ -1,0 +1,22 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+asyncpg        # for Postgres async driver (optional)
+psycopg2-binary
+pydantic
+python-multipart
+aiofiles
+sentence-transformers
+faiss-cpu
+pdfminer.six
+python-docx
+python-dotenv
+pandas
+tqdm
+raven #(optional for logging)
+rapidfuzz
+pytest
+httpx
+alembic
+uvicorn
+pypdf
