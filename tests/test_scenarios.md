@@ -1,6 +1,6 @@
 # Test Scenarios for Hybrid NL-to-SQL Engine
 
-This document lists natural language queries tested on different database schemas to verify schema-agnostic functionality.
+This document lists natural language queries tested on different database schemas to verify schema-agnostic functionality...
 
 ---
 
@@ -33,5 +33,6 @@ Tables: `staff`, `offices`
 |----|------------------------|--------------|----------------|
 | 1 | What is the company policy on remote work? | PDF document | “Employees can work remotely up to 2 days per week.” |
 | 2 | How many employees are mentioned in Q1 report? | Database + Document | 120 |
+
 
 
