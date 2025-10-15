@@ -1,37 +1,3 @@
-# # backend/app/api/routes/query.py (CLEANED)
-
-# from fastapi import APIRouter, Depends, HTTPException
-# from pydantic import BaseModel
-# from typing import Dict, Any
-
-# # We only need the dependency function for the POST endpoint
-# from app.api.routes.schema import get_query_engine 
-# from app.services.query_engine import QueryEngine # Type Hint only
-
-# router = APIRouter()
-
-# class QueryRequest(BaseModel):
-#     query: str
-#     limit: int = 50
-#     offset: int = 0
-
-# @router.post("/query")
-# async def process_user_query(
-#     req: QueryRequest,
-#     # This line ensures the engine is initialized (via the /connect-database call) 
-#     # before we attempt to use it.
-#     qe: QueryEngine = Depends(get_query_engine) 
-# ) -> Dict[str, Any]:
-#     """
-#     Processes a natural language query using the active QueryEngine.
-#     """
-#     try:
-#         results = qe.process_query(req.query, req.limit, req.offset)
-#         return {"status": "ok", "results": results}
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=f"Query processing failed: {str(e)}")
-
-# # Remove any lines here that tried to initialize QueryEngine outside of the router function.
 
 # backend/app/api/routes/query.py
 
@@ -147,3 +113,4 @@ async def process_user_query(req: QueryRequest, qe: QueryEngine = Depends(get_qu
     results["cache_stats"] = qe.cache.get_stats()
 
     return {"status": "ok", "results": results}
+
