@@ -1,0 +1,4 @@
+INSERT INTO EMPLOYEES (id, name, role, department, raw_text, created_at)
+VALUES
+(1, 'Alice', 'Engineer', 'AI', 'Notes about Alice', NOW()),
+(2, 'Bob', 'Data Scientist', 'ML', 'Notes about Bob', NOW());
