@@ -1,0 +1,21 @@
+[
+    {
+      "schema": "schema_variation_1",
+      "query": "How many employees are there?",
+      "expected_sql": "SELECT COUNT(*) FROM employees;",
+      "expected_output": [{"count": 25}]
+    },
+    {
+      "schema": "schema_variation_1",
+      "query": "Show all department names.",
+      "expected_sql": "SELECT dept_name FROM departments;",
+      "expected_output": [{"dept_name": "HR"}, {"dept_name": "Finance"}]
+    },
+    {
+      "schema": "schema_variation_2",
+      "query": "How many employees are there?",
+      "expected_sql": "SELECT COUNT(*) FROM staff;",
+      "expected_output": [{"count": 42}]
+    }
+  ]
+  
